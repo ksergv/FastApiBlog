@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/modal.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- Audio Player CSS & Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="js/mediaelement-and-player.min.js"></script>
+    <link rel="stylesheet" href="css/style.css" media="screen" />
+    <!-- end Audio Player CSS & Scripts -->
+  </head>
+
+  <body>
+    <h1>Просмотр настроек на Арканы Таро</h1>
+
+    <div class="modal-wrap hide" id="sign-in">
+      <div class="modal">
+        <form id="imageForm">
+          <label for="imageSelect">Выбери карту:</label>
+          <select id="imageSelect">
+            <option value="media/12.jpg">12</option>
+            <option value="media/14.jpg">14</option>
+            <option value="media/15.jpg" selected>15</option>
+            <option value="media/16.jpg">16</option>
+            <option value="media/17.jpg">17</option>
+            <option value="media/20.jpg">20</option>
+          </select>
+        </form>
+
+        <img
+          id="selectedImage"
+          alt="Выбранное изображение"
+          style="max-width: 150px; display: block; margin: 20px auto"/>
+
+        <p class="modal-close">Выбрать</p>
+      </div>
+    </div>
+
+ 
+
+    <div class="block-modal-test">
+      <div class="form-slider">
+            <div class="left-50">
+                <p id="reaad-rules" class="read-rules">Читать описание...</p>
+                <img id="displayImage" class="card_img" src="media/15.jpg" />
+            </div>
+
+            <div class="info">
+                <div class="right-100">
+                    <p class="read-rules-back">Вернуться к карте...</p>
+                </div>
+
+                <div id="demo"></div>
+            
+            </div>
+            <div class="right-100">
+                <div class="left-text">
+                    <p class="read-cards">Выбрать карту...</p>
+                </div>
+                <div class="right-text">
+                    <p>Прослушивание аудионастройки(см. ниже)  помогает <br/> включиться в канал </p>
+                </div>
+            </div>   
+           
+      </div>
+    </div>
+    
+    
+
+
+      <div id="player" class="player"></div>
+    
+    
+    <script src="js/rules_slider.js"></script>
+    <script src="js/read_cards.js"></script>
+  </body>
+</html>

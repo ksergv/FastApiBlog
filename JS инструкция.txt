@@ -1,0 +1,101 @@
+Краткая инструкция по синтаксису JavaScript для создания и изменения HTML/CSS
+1. Получение элемента
+
+Чтобы работать с элементами на странице, их нужно сначала найти.
+
+По ID:
+const element = document.getElementById('myId');
+По классу:
+const elements = document.getElementsByClassName('myClass'); // HTMLCollection
+По тегу:
+const elements = document.getElementsByTagName('div'); // HTMLCollection
+Современный способ с селекторами (универсальный):
+const element = document.querySelector('.myClass'); // Первый элемент
+const elements = document.querySelectorAll('.myClass'); // Все элементы (NodeList)
+2. Изменение содержимого HTML
+
+Заменить текст внутри элемента:
+element.textContent = 'Новый текст';
+Заменить весь HTML внутри элемента:
+element.innerHTML = '<strong>Новый HTML</strong>';
+3. Создание нового элемента
+
+Создать элемент:
+const newElement = document.createElement('div');
+newElement.textContent = 'Привет, мир!';
+Добавить элемент на страницу:
+document.body.appendChild(newElement); // В конец body
+parentElement.appendChild(newElement); // Вложить в другой элемент
+Вставить перед существующим элементом:
+parentElement.insertBefore(newElement, existingChild);
+4. Удаление элемента
+
+Удалить элемент:
+element.remove();
+Удалить через родителя:
+element.parentElement.removeChild(element);
+5. Изменение CSS
+
+Изменить стиль напрямую:
+element.style.color = 'red';
+element.style.backgroundColor = 'yellow';
+Добавить/удалить классы:
+element.classList.add('myClass'); // Добавить класс
+element.classList.remove('myClass'); // Удалить класс
+element.classList.toggle('myClass'); // Переключить класс
+6. События
+
+Назначить обработчик события:
+element.addEventListener('click', () => {
+    alert('Элемент кликнут!');
+});
+Удалить обработчик события:
+const handler = () => { console.log('Clicked!'); };
+element.addEventListener('click', handler);
+element.removeEventListener('click', handler);
+7. Атрибуты
+
+Получить значение атрибута:
+const value = element.getAttribute('src');
+Изменить атрибут:
+element.setAttribute('src', 'newImage.jpg');
+Удалить атрибут:
+element.removeAttribute('src');
+8. Манипуляции с классами
+
+Проверить наличие класса:
+const hasClass = element.classList.contains('myClass');
+Заменить один класс на другой:
+element.classList.replace('oldClass', 'newClass');
+9. Манипуляции с формами
+
+Получить значение поля ввода:
+const value = document.getElementById('inputId').value;
+Установить значение:
+document.getElementById('inputId').value = 'Новое значение';
+10. Примеры работы с CSS через classList
+
+// Добавление класса
+element.classList.add('active');
+
+// Удаление класса
+element.classList.remove('hidden');
+
+// Переключение класса (если есть — удаляет, если нет — добавляет)
+element.classList.toggle('visible');
+Общий пример
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Создаём новый div
+    const newDiv = document.createElement('div');
+    newDiv.textContent = 'Hello, World!';
+    newDiv.style.color = 'blue';
+
+    // Вставляем его в body
+    document.body.appendChild(newDiv);
+
+    // Добавляем событие на новый div
+    newDiv.addEventListener('click', () => {
+        newDiv.classList.toggle('highlight');
+    });
+});

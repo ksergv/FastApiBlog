@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+}
+
+h1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: stretch;
+    align-items: center;
+    font-size: 36px;
+    color:red;
+    text-align:center;
+}
+
+.block-modal-test {
+    width: 400px;
+    height:500px;
+    border: 1px solid black;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+.card_img{
+    width: 200px;
+    height: 350px;
+    display: flex;
+    margin-left:20%;
+}
+
+.form-slider {
+    width: 800px;
+    height: 440px;
+    margin: 0 auto;
+    background: #fafafa;
+    transition: all ease 1s;
+}
+
+.left-50, .right-50 {
+    width: 50%;
+    float: left;
+    background: #194bd5;
+    color:white;
+    height: 60px;
+    padding: 0 10px 0 0;
+    border: 1px solid black;
+}
+.info{
+    background: #fafafa;
+    min-height: 50px;
+    max-height: 440px;
+    overflow-y: scroll;
+    padding:0;
+    text-align: justify;
+}
+#demo {
+    padding:0 5px;
+}
+ul,li{
+    padding:5px;
+    margin:5px;
+}
+
+.right-100 {
+    width: 100%;
+    padding: 0 10px 0 0;
+    background: #194bd5;
+    color: white;
+    max-height: 60px;
+    cursor: pointer;
+    display: flex; /* Используем flexbox для выравнивания */
+    justify-content: space-between; /* Размещаем элементы слева и справа */
+    align-items: center; /* Центрируем элементы по вертикали */
+}
+
+.left-text {
+    cursor: pointer;
+}
+
+.right-text {
+    padding:0 15px;
+}
+
+
+.read-rules, .read-cards, .read-rules-back {
+    cursor: pointer;
+    padding:10px 20px;
+    border-radius:5px;
+    margin-bottom: 20px;
+}
+.read-rules:hover {
+transform:scale(1.1);
+transition: all ease 0.3s;
+}
+.read-cards:hover{
+ transform:scale(1.1);
+ transition: all ease 0.3s;
+}
+.read-rules-back:hover{
+    transform:scale(1.1);
+    transition: all ease 0.3s;
+   }
+
+.player{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: stretch;
+    align-items: center;
+    margin-top:  0px;
+}   
+/* blokи слева и справа */
+.wrapper {
+    width: 100%;
+    padding: 10% 2% 0 2%;
+    background: #fafafa;
+    max-height: 900px;
+    cursor: pointer;
+    display: flex; /* Используем flexbox для выравнивания */
+    justify-content: space-between; /* Размещаем элементы слева и справа */
+    text-align: justify;
+
+}
+.left{
+max-width:360px;
+padding: 20px;
+color:black;
+justify-items: center;
+}
+.right{
+max-width:360px;
+padding: 20px;
+color:black;
+justify-items: center;
+}

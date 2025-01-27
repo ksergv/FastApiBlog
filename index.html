@@ -1,0 +1,95 @@
+<!-- frontend/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FastAPI Blog with Vue 2</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine|Pacifico&family=Rubik+Scribble&display=swap">
+    <!-- Box Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dark.css">
+	     <!--Favicon-->
+     <link rel="icon" href="favicon.ico" type="image/x-icon">
+       <!-- Box Icons -->
+       <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Подключение Vue 2 через CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <!----->
+    <script src="js/header.js" defer></script>
+    <!--redactor--->
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+    <script src="./js/ckeditor/ckeditor.js" charset="utf-8" ></script>
+</head>
+<body>
+    
+    <!----Vue-2 app-->
+    <div id="app"></div>
+    <div class="marquee-container">
+        <marquee>
+        "ВРЕМЯ — ВЕЛИКИЙ УЧИТЕЛЬ, НО, К СОЖАЛЕНИЮ, ОНО УБИВАЕТ ВСЕХ СВОИХ УЧЕНИКОВ». – ЛУИ ГЕКТОР БЕРЛИОЗ
+        </marquee>
+    </div>
+    <div class="footer">
+        <p>&#169; Fast API Blog All Right Reserved</p>
+        <p> Created with Vue-2</p>
+          <div class="social">
+              <a href="#"><i class='bx bxl-facebook'></i></a>
+              <a href="#"><i class='bx bxl-twitter'></i></a>
+              <a href="#"><i class='bx bxl-instagram'></i></a>
+              <a href="#"><i class='bx bxl-linkedin' ></i></a>
+          </div>
+        </div>
+          <!-- Обернем <marquee> в <div>, чтобы оно переносилось -->
+        
+      
+
+    <!-- Подключение app.js -->
+    <script src="app.js"></script>
+    <script src="js/dark.js"></script>
+    <script>
+        // Получаем span и img элементы
+const up = document.querySelector('.up');
+const logoImg = document.getElementById('logoImg');
+const hello= document.getElementById('hello');
+
+
+// Создаем аудио элемент для воспроизведения файла
+const audio = new Audio('audio/hello.mp3');
+const video = document.getElementById('catVideo')
+
+// Флаг для отслеживания, был ли звук уже проигран
+let hasPlayedAudio = false;
+
+// Добавляем событие наведения мыши на span
+up.addEventListener('mouseover', () => {
+    // Добавляем класс .progress для запуска анимации
+    if (!hasPlayedAudio) {
+    logoImg.classList.add('progress');
+    hello.classList.add('text');
+    hello.classList.remove('hello');
+    hello.classList.add('smoke-effect');
+    
+
+     // Воспроизводим аудио только один раз
+   
+        //audio.play();
+        video.play(); // Воспроизводим видео
+        hasPlayedAudio = true; // Обновляем флаг, чтобы видео и звук больше не воспроизводились
+    }
+});
+
+// Убираем класс после завершения анимации, чтобы можно было повторить
+logoImg.addEventListener('animationend', () => {
+    logoImg.classList.remove('progress');
+ 
+});
+
+        </script>
+    
+
+    
+    
+</body>
+</html>

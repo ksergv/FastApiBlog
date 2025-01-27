@@ -1,0 +1,265 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  scroll-padding-top: 2rem;
+  box-sizing: border-box;
+  color:black;
+  text-align:justify;
+  font-size:18px;
+  font-weight:400;  
+}
+
+
+body {
+   font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+.logo  {
+  font-family: 'Poppins', serif;
+  font-size: 40px;
+  color: var(--text-color);
+  text-shadow: 4px 4px 4px #aaa;
+  margin-right: 50px;
+}
+p {
+  margin-bottom: 1em;
+  color:rgb(15, 14, 14);
+	text-align:justify;
+	font-size:18px;
+	font-weight:400;  
+  }
+b{
+  font-weight:700; 
+}
+
+.container{
+    display:block;
+    background-color: #fafafa;
+      opacity:0.8;
+      width:95%;
+      height:1000px;
+      margin:20px 2%;
+      padding:20px;
+      border: 1px solid silver;
+      position:relative;
+      padding-top:50px;
+
+  }
+
+
+.LoadedProg{
+    display: flex;
+    flex-direction: column;
+    padding-bottom:10px; 
+    position:absolute;
+    top: 100px;
+    left: 100px;
+}
+ 
+.buttons{
+  display: flex;
+  flex-direction: column;
+  position:absolute;
+  top: 100px;
+  left: -50px;
+}  
+.buttons-1{
+  display: flex;
+  flex-direction: column;
+  position:absolute;
+  top: 0px;
+  left: 250px;
+} 
+.buttons-2{
+  display: flex;
+  flex-direction: column;
+  position:absolute;
+  top: 350px;
+  left: -250px;
+} 
+.buttons-3{
+  display: flex;
+  flex-direction: column;
+  position:absolute;
+  top: 0px;
+  left: 250px;
+} 
+
+a{
+  display: flex;
+  flex-direction: row;
+  background-color: #226ea4; /* Цвет фона */
+  align-items: center;
+  text-align: left;
+  position:relative;
+  width:200px;
+  font-size:14px;
+  color:white;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: transform 0.3s ease; /* Анимация для плавного увеличения */
+}
+ a:hover{
+  background-color: #159845;
+ }
+   img {
+    display: flex;
+    flex-direction: row;
+    padding:10px;
+    width: 80px;
+    height: 60px;
+    object-fit: contain; /* Подгонка изображения без искажения */
+    transition: transform 0.3s ease; /* Анимация для плавного увеличения */
+}
+
+img:hover {
+    transform: scale(1.2); /* Увеличение изображения при наведении */
+}
+.img-w200{
+  width: 200px;
+  height: 150px;
+  float:left;
+  object-fit:cover;
+}
+.img-h200{
+  width: 150px;
+  height: 220px;
+  float:left;
+  object-fit:cover;
+}
+.img-150{
+  width: 150px;
+  height: 150px;
+  float:left;
+  object-fit:cover;
+}
+.section {
+  position: absolute;
+  top:-300px;
+  left:500px;                   /* Расположение по центру */
+  padding: 10px;
+  min-width: 300px;            /* Минимальная ширина для малых экранов */
+  max-width: 600px;              /* Максимальная ширина для больших экранов */
+  width: 600px;                  /* Ширина 50% от экрана, но будет ограничена max-width */
+  height: 700px;
+  display: none;               /* Скрыто по умолчанию */
+  border: 1px solid silver;
+  overflow-y: auto; /* Вертикальная прокрутка */
+  overflow-x: hidden; /* Скрыть горизонтальную прокрутку */          /* Вертикальная прокрутка при переполнении */
+  box-sizing: border-box;
+}
+
+/* Медиазапросы для маленьких экранов */
+@media (max-width: 1300px) {
+  .section {
+      width: 500px;              /* Почти полная ширина на малых экранах */
+      left: 480px;                /* Отступ слева, чтобы избежать краев экрана */
+      transform: none;         /* Отключение смещения для более точного позиционирования */
+
+  }
+}
+/* Медиазапросы для маленьких экранов */
+@media (max-width: 1000px) {
+  .section {
+      width: 400px;              /* Почти полная ширина на малых экранах */
+      left: 480px;                /* Отступ слева, чтобы избежать краев экрана */
+      transform: none;         /* Отключение смещения для более точного позиционирования */
+
+  }
+}
+
+
+figure {
+  background-color: #5f6a72; /* Цвет фона */
+  padding: 10px; /* Поля вокруг */
+  display: block; /* Блочный элемент */
+  width: 150%; /* Ширина */
+  max-width:150px;
+  float: left; /* Блоки выстраиваются по горизонтали */
+  margin: 0 10px 15px 0; /* Отступы */
+  text-align: center; /* Выравнивание по центру */
+  border: 1px solid silver;   
+  position: relative;
+  overflow: hidden;
+  z-index: 200;
+ }
+ input{
+  display: flex;
+  flex-direction: row;
+  position:relative;
+  width:50px;
+  margin:0;
+  padding:0;
+}
+
+
+ figcaption {
+  display: inline-flex;
+  align-items: center;
+  color: #fff; /* Цвет текста */
+  margin:0;
+  padding:0;
+  text-align: left;
+  font-size: 10px;
+  font-style: italic;
+ }
+
+ figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Подгонка изображения без искажения */
+  transition: transform 0.3s ease; /* Анимация для плавного увеличения */
+}
+
+figure:hover img {
+  transform: scale(1.2); /* Увеличение изображения при наведении */
+}
+ .ramka{
+  display:flex;
+  float:right;
+  width:100px;
+  height:100px;
+  border:1px solid silver;
+  padding:20px;
+  margin: 0 0 0 20px;
+ }   
+ .ramka img{
+  width:50px;
+  height:50px;
+ }
+ /* red ball */
+ .breathing-technique {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background-color: #f0f8ff;
+  border-radius: 5px;
+}
+.breathing-animation {
+  width: 100px;
+  height: 100px;
+  margin: 1rem auto;
+  background-image: url('../img/generator.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  animation: breathe 8s infinite ease-in-out;
+}
+@keyframes breathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+.footnotes {
+  margin-top: 2rem;
+  font-size: 0.9em;
+  border-top: 1px solid #eee;
+  padding-top: 1rem;
+}
+      
