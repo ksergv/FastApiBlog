@@ -147,8 +147,8 @@ Vue.component('post-manager', {
     <span class="filter-item" :class="{ 'active-filter': filtedValue === 'gigong' }" data-filter="gigong" @click="filterPosts">Цигун</span>
     <span class="filter-item" :class="{ 'active-filter': filtedValue === 'info' }" data-filter="info" @click="filterPosts">Информация</span>
     <span class="filter-item" :class="{ 'active-filter': filtedValue === 'health' }" data-filter="health" @click="filterPosts">Здоровье</span>
-    <span class="filter-item" :class="{ 'active-filter': filtedValue === 'games' }" data-filter="games" @click="filterPosts">Игры</span>
-    <span class="filter-item" :class="{ 'active-filter': filtedValue === 'pdf' }" data-filter="pdf" @click="filterPosts">PDF</span>
+    <span class="filter-item" :class="{ 'active-filter': filtedValue === 'quantum' }" data-filter="quantum" @click="filterPosts">Квантовая реальность</span>
+   
 
     <button @click="togglePostForm" class="new-post-button">Новый пост</button>
     <p style="width:100px;margin: 0;"><img  src="img/ganesha.png" width="100px" alt="logo" /></p>
