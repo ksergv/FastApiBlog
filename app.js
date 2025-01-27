@@ -956,7 +956,7 @@ new Vue({
            
                     <!-- Logo -->
                      <div class="video-container">
-                        <video class="up" id="catVideo" src="./video/hello.mp4" type="video/mp4"></video>
+                        <video class="up" id="catVideo" src="/video/hello.mp4" type="video/mp4"></video>
                     </div>
                       
 
